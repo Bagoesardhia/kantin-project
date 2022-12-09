@@ -50,7 +50,7 @@ export default function navbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/login" className="flex item-center">
+        <a href="/loginPages" className="flex item-center">
           Login
         </a>
       </Typography>

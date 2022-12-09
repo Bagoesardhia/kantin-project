@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SplashScreen from './components/pages/splashScreen'
 import IntroScreen from './components/pages/introPages'
 import DashboardScreen from './components/pages/dashboardScreen'
+import LoginPages from './components/pages/loginPages'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<SplashScreen />} />
           <Route path="/intro" element={<IntroScreen />} />
           <Route path="/dashboard" element={<DashboardScreen />} />
+          <Route path="/loginPages" element={<LoginPages/>} />
         </Routes>
       </BrowserRouter>
     </div>
