@@ -48,8 +48,9 @@ export default function loginForm() {
         },
       });
     } else
-      swal("Failed", result.user, "error", {
-        buttons: false,
+      swal.fire({
+        icon: "error",
+        title: "Login Gagal",
         timer: 2000,
       });
   }

@@ -9,6 +9,7 @@ import SplashScreen from './components/pages/splashScreen'
 import IntroScreen from './components/pages/introPages'
 import DashboardScreen from './components/pages/dashboardScreen'
 import LoginPages from './components/pages/loginPages'
+import RegisterScreen from './components/pages/registerScreen';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/intro" element={<IntroScreen />} />
           <Route path="/dashboard" element={<DashboardScreen />} />
           <Route path="/loginPages" element={<LoginPages/>} />
+          <Route path="/register" element={<RegisterScreen/>} />
         </Routes>
       </BrowserRouter>
     </div>

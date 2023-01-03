@@ -41,7 +41,7 @@ export default function navbar() {
         className="p-1 font-normal"
       >
         <a href="/details" className="flex item-center">
-          Detail
+          Setup
         </a>
       </Typography>
       <Typography
@@ -50,8 +50,8 @@ export default function navbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/loginPages" className="flex item-center">
-          Login
+        <a href="/register" className="flex item-center">
+          Register
         </a>
       </Typography>
     </ul>
