@@ -10,7 +10,6 @@ export default function dashboardScreen() {
             <Navbar/>
             <p1>Selamat Datang di Kantin Kreasi</p1>
             <Find/>
-            <Tabs/>
         </div>
     )
 }

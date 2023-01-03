@@ -1,7 +1,8 @@
 import { React, useEffect, useState } from "react";
 import { Input, Button } from "@material-tailwind/react";
 import useHistory from "use-history";
-import swal from "sweetalert";
+import swal from "sweetalert2";
+// import  { Redirect } from 'react-router-dom'
 
 export default function loginForm() {
   const [id, setID] = useState("");
@@ -34,18 +35,23 @@ export default function loginForm() {
     console.log(result);
 
     if (!result.user) {
-      swal("Welcome", item.name, "success", {
-        buttons: false,
-        timer: 2000,
-        target: "/dashboard"
+      swal.fire({
+        icon: "success",
+        title: "berhasil",
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didDestroy: (toast) => {
+          window.location = "/dashboard";
+        },
       });
     } else
       swal("Failed", result.user, "error", {
         buttons: false,
         timer: 2000,
       });
-
-    // window.location.href = "/dashboard";
   }
 
   return (

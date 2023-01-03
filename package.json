@@ -15,6 +15,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
     "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.6.16",
     "use-history": "^1.4.1"
   },
   "devDependencies": {
