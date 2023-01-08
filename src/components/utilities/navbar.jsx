@@ -13,6 +13,9 @@ export default function navbar() {
   // Create Temporary Variable Condition Mobile View
   const [openNav, setOpenNav] = useState(false);
 
+  // Get name by Login
+  var name = JSON.parse(localStorage.getItem("list"));
+
   // Create Function Condition Screen
   useEffect(() => {
     window.addEventListener(
@@ -20,6 +23,10 @@ export default function navbar() {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
+
+  async function logout() {
+    localStorage.removeItem('list');
+  }
 
   // Function Get List of Navbar
   const navList = (
@@ -30,7 +37,7 @@ export default function navbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/" className="flex item-center">
+        <a href="/dashboard" className="flex item-center">
           Home
         </a>
       </Typography>
@@ -40,7 +47,17 @@ export default function navbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/details" className="flex item-center">
+        <a href="/order" className="flex item-center">
+          Order
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="/setup" className="flex item-center">
           Setup
         </a>
       </Typography>
@@ -52,6 +69,17 @@ export default function navbar() {
       >
         <a href="/register" className="flex item-center">
           Register
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+        onClick={logout}
+      >
+        <a href="/" className="flex item-center">
+          Logout
         </a>
       </Typography>
     </ul>
@@ -67,7 +95,7 @@ export default function navbar() {
             variant="small"
             className="mr-4 cursor-pointer py-1.5 font-normal"
           >
-            <span>Kantin Kreasi</span>
+            <span>Pinjaman Offline</span>
           </Typography>
           <div className="hidden lg:block">{navList}</div>
           <IconButton

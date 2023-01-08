@@ -9,7 +9,7 @@ export default function loginForm() {
   const [name, setName] = useState("");
   const history = useHistory();
   useEffect(() => {
-    if (localStorage.getItem("user-info")) {
+    if (localStorage.getItem("list")) {
       // history.push("/dashboard")
       console.log("berhasil");
     }
@@ -31,8 +31,10 @@ export default function loginForm() {
       body: JSON.stringify(item),
     });
     result = await result.json();
-    localStorage.setItem("user-info", JSON.stringify(result));
-    console.log(result);
+
+    localStorage.setItem("list", JSON.stringify(item.name));
+    console.log(localStorage);
+    console.log(result.id)
 
     if (!result.user) {
       swal.fire({
